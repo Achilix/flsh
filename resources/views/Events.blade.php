@@ -29,6 +29,7 @@
                                         <p>Duration: {{ $event->duration }}</p>
                                         <p>Location: {{ $event->location }}</p>
                                         <p>Time: {{ $eventTime->format('F j, Y, g:i a') }}</p>
+                                        <a href="{{ route('events.show', $event->id) }}">View Details</a>
                                     </li>
                                 </div>
                             </div>
@@ -59,6 +60,8 @@
                                             <p>Duration: {{ $event->duration }}</p>
                                             <p>Location: {{ $event->location }}</p>
                                             <p>Time: {{ $eventTime->format('F j, Y, g:i a') }}</p>
+                                            <a href="{{ route('events.show', $event->id) }}">View Details</a>
+
                                         </li>
                                     </div>
                                 </div>

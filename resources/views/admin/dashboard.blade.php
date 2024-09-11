@@ -11,7 +11,7 @@
 
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mt-4">
                 <div class="p-6 text-gray-900">
-                    <form action="{{ route('events.store') }}" method="POST">
+                    <form action="{{ route('events.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div>
                             <label for="name">Event Name</label>
@@ -33,6 +33,16 @@
                             <label for="time">Time</label>
                             <input type="datetime-local" id="time" name="time" class="mt-1 block w-full" required>
                         </div>
+                        <div class="mt-4">
+                            <label for="description" class="block mb-2">Description</label>
+                            <input type="text" id="description" name="description" class="mt-2 block w-full p-2" required>
+                        </div>
+                        <div class="mt-4">
+                            <label for="image">Event Image</label>
+                            <input type="file" id="image" name="image" class="block mt-1 w-full">
+                        </div>
+
+
                         <div class="mt-4">
                             <button type="submit" style="background-color: black; color: white; padding: 10px; display: block;">
                                 Create Event

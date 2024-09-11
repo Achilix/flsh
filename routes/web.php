@@ -22,12 +22,13 @@ Route::get('test', function(){
     );
     return 'Done';
 });
+Route::get('/events/{id}', [EventController::class, 'show'])->name('events.show');
 
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/admin', function () {
+Route::get('/admin', function () { 
     return view('admin.dashboard');
 })->middleware(['auth', 'admin'])->name('admin.dashboard');
 
