@@ -8,8 +8,10 @@
 <div class="container mx-auto py-12 px-4">
     <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
         @if($event->image)
-            <img src="{{ $event->image }}" alt="{{ $event->name }}" class="w-full h-64 object-cover">
-        @else
+        <div class="w-full h-auto">
+            <img src="{{ asset('images/' . $event->image) }}" alt="{{ $event->name }}" class="w-full h-auto object-cover">
+        </div>
+                @else
             <img src="https://via.placeholder.com/800x400?text=No+Image+Available" alt="No image available" class="w-full h-64 object-cover">
         @endif
 
